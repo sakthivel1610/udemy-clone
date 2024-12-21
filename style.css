@@ -85,6 +85,16 @@ align-items: center;
     background-color: #a435f0;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
+    border: solid #a435f0 1px;
+}
+.categories p:hover
+{
+    transition: 1s;
+    background-color:transparent;
+    color:black;
+    border: solid #a435f0 1px;
+    
 }
 .sale-image img
 {
@@ -99,11 +109,28 @@ align-items: center;
     background-color: white;
     border:solid black 2px;
     height: fit-content;
-    top: 110px;
+    top: 70px;
     width:350px;
     left:10%;
    position: absolute;
     padding:20px;
+    animation-name: sale;
+    animation-duration: 2s;
+    opacity:0;
+    animation-fill-mode: forwards;
+}
+@keyframes sale {
+    0%
+    {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
 }
 .recommended
 {
